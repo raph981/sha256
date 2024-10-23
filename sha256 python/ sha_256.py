@@ -1,7 +1,6 @@
 import functions
 import constants
 import calculating_functions
-import codecs
 h = ['0x6a09e667', '0xbb67ae85', '0x3c6ef372', '0xa54ff53a', '0x510e527f', '0x9b05688c', '0x1f83d9ab', '0x5be0cd19']
 k = ['0x428a2f98', '0x71374491', '0xb5c0fbcf', '0xe9b5dba5', '0x3956c25b', '0x59f111f1', '0x923f82a4','0xab1c5ed5', 
      '0xd807aa98', '0x12835b01', '0x243185be', '0x550c7dc3', '0x72be5d74', '0x80deb1fe','0x9bdc06a7', '0xc19bf174', 
@@ -40,16 +39,5 @@ def main(input, H, K):
     return H
 
 if __name__ == '__main__':
-     print(main(str(2613),H, K))
-     i = 0
-     
-     while True:
-        hex_values = "0100000000000000000000000000000000000000000000000000000000000000000000003ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a29ab5f49ffff001d1dac2b7c"
-        result_string = codecs.decode(hex_values, 'hex').decode('utf-8')
-        if int(hash) > 115414672968422429946412118886657223350158095212740534089704277315201526:
-            print(f"sha256({i})= {hash}")
-            i = i + 1
-        else:
-            print(f"sha256({i})= {hash}")
-            break
+     print(main("abc",H, K))                            #input what you want to hash at the location of abc as a string
          
